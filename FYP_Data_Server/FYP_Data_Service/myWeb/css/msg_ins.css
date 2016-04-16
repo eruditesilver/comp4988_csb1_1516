@@ -1,0 +1,84 @@
+html {
+		height: 100%;
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		font-family: Helvetica, Arial, Sans-serif;
+		font-size: 14px;
+	}
+	.msg-container {
+		width: 100%;
+		height: 100%;
+	}
+	.header {
+		width: 100%;
+		height: 30px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		padding: 15px 0px 5px;
+		font-size: 20px;
+		font-weight: normal;
+		background-color: #000000;
+		color:#FFFFFF;
+	}
+	.msg-area {
+		height: calc(100% - 53px);
+		width: 100%;
+		background-color:#FFF;
+		overflow-y: scroll;
+		background-image: url("../img/blue.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	.msg-area .msg {
+		margin: 10px 10px;
+		background-color: #FFFFFF;
+		max-width: calc(80%);
+		color: #000000;
+		padding: 10px;
+		border-radius: 10px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+/*	.msg-area .msg .professor_answer {
+		color: #AACCBB;
+	}*/
+	.msg-area .msg .professor_answer {
+		color: #FF00FF;
+	.msginput {
+		padding: 5px;
+		margin: 3px;
+		font-size: 14px;
+		width: calc(100% - 20px);
+		outline: none;
+	}
+	.bottom {
+		width: 100%;
+		height: 70px;
+		position: fixed;
+		bottom: 0px;
+		border-top: 1px solid #CCC;
+		background-color: #EBEBEB;
+	}
+	.floatRight {
+		float: right;
+		padding:1px;
+	 }
+	h1 {
+		padding: 0px;
+		margin: 20px 0px 0px 0px;
+		text-align: center;
+		font-weight: normal;
+	}
+
+.msgsentby {
+		
+    color: #8C8C8C;
+		font-size: 12px;
+		margin: 4px 0px 0px 10px;
+    display: block; 
+	}

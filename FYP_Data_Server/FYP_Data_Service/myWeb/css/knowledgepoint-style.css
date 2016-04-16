@@ -1,0 +1,231 @@
+#container {
+   /*width: 100%;
+   text-align:center;
+   table-layout:fixed;*/
+   min-height: 100%;
+}
+
+#toolbar {
+  width: 15%;
+}
+
+#link-to-draw {
+  width: 5%;
+  height: 100%;
+}
+
+#link-to-draw > p {
+  /*display: inline-block;*/
+  /*width: 100%;*/
+  height: 100%;
+  vertical-align: middle;
+  white-space: normal;
+  text-align: left;
+  padding: 0.7em 0.5em;
+}
+
+#toolbar > * {
+	float: left;
+	float: left;
+	/*display: block;*/
+}
+
+.dropdown-menu {
+	min-width:128px;
+	padding: 5px 5px;
+}
+
+.dropdown-menu > a {
+	padding-left: 4px;
+}
+
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#workarea-container {
+  width: 85%;
+}
+
+#workarea-canvas-container {
+  /*overflow: auto;
+  min-height: 480px;
+  max-height: 500px;
+  max-width: 400px;
+  padding-right: 0px;
+  padding-left: 0px;*/
+}
+
+ul li {
+  list-style-type: none;
+  vertical-align: middle;
+}
+
+img {
+  /*width: 30px;
+  height: 30px;  */
+}
+
+/* hide text img*/
+.hide > img {
+  opacity: 0.2;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.ui-menu {
+  text-align: center;
+}
+#save-graph {
+  float: right;
+}
+
+#popupmenu {
+  z-index:100; 
+}
+
+#High-priority > img{
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+}
+#Medium-priority >  img {
+  background-size: 25px 25px;
+  /*width: 25px;
+  height: 25px;*/
+}
+#Low-priority >  img {
+  background-size: 20px 20px;
+  /*width: 20px;
+  height: 20px;*/
+}
+
+.btn.btn-secondary.active {
+	background-color: #66b3ff;
+}
+
+.ui-front{ 
+  z-index:100; 
+}
+.ui-menu-item .ui-menu{
+  /*width: 100px;*/
+}
+.ui-menu-item .ui-menu .ui-menu-divider {
+  display: inline-block;  
+}
+
+/*.all-assetslist > li, .all-msglist > li{
+  -webkit-touch-callout: none;  /*iOS Safari */
+  /*-webkit-user-select: none;    Chrome/Safari/Opera */
+  /*-khtml-user-select: none;     Konqueror */
+  /*-moz-user-select: none;       Firefox */
+  /*-ms-user-select: none;        IE/Edge */
+  /*user-select: none;            non-prefixed version, currently
+                                  not supported by any browser */
+/*}*/
+/*tr td{
+    width: 0%;
+    white-space:nowrap;
+}*/
+
+/* popup */
+#individual-2nd-popup-popup, #tag-tool-pdf-popup-popup, #tag-tool-video-popup-popup {
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+#tag-tool-audio-popup-popup {
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+/*tagging page */
+#viewer-container {
+  text-align: center;
+  min-height: 80%;
+}
+#slider-container > * {
+  vertical-align: bottom;
+}
+
+/*.tag-start-container, .tag-end-container {
+  width: 18%;
+  padding: 0px 0.8em;
+}*/
+
+.tag-range-container{
+  width: 60%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.canvas-container {
+	/*display: table;*/
+	margin: 0 auto ;
+	position: absolute;
+}
+
+.ui-input-text .invalid {
+  border: 1px solid red;
+  background-color: #ffb3b3;
+}
+
+.invalid-information{
+  width: 60%;
+}
+
+input {
+	max-height: 100%;
+}
+
+/*.ui-input-text input:invalid, input:-moz-ui-invalid {
+  border: 1px solid red;
+  background-color: #ffb3b3;
+}
+
+input:valid {
+  border: 1px solid black;
+}*/
+
+canvas {
+   display: inline;
+   /*position: absolute;
+   height: 80%;
+   background-color: #DDDDDD;*/
+   top: 0;
+}
+
+video {  
+  width:100%; 
+  max-width:1000px; 
+  height:50%; 
+  max-height:300px; 
+}
+
+
+audio {  
+  width:100%;
+}
+
+object {
+  min-height: 450px;
+  max-height: 90%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}

@@ -1,0 +1,82 @@
+#abc {
+	width:100%;
+	height:100%;
+	opacity:.95;
+	top:0;
+	left:0;
+	display:none;
+	position:fixed;
+	background-color:#313131;
+	overflow: auto;
+}
+div #close {
+	position:absolute;
+	left:10px;
+	top:10px;
+	cursor:pointer;
+	font-weight: bold;
+}
+div#popupContact {
+	position:fixed;
+	left:45%;
+	top:17%;
+	margin-left:-280px;
+	right:30%;
+}
+form {
+	padding:25px 50px;
+	
+	border-radius:10px;
+	font-family:raleway;
+	
+	background-image: url("../img/09.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	background-size: cover;
+}
+form  .floatRight{
+
+	padding: 3px;
+}
+p {
+	margin-top:30px
+}
+h2 {
+	color:#FFFFFF;
+	background-color:#000000;
+	padding:5px 35px;
+	margin:-30px -50px;
+	text-align:center;
+	border-radius:10px 10px 0 0
+}
+hr {
+	margin:20px -50px;
+	border:none;
+}
+input[type=text] {
+	width:80%;
+	margin-top:40px;
+	margin-bottom: 5px;
+	margin-left:0px;
+	font-size:16px;
+	
+}
+hr div {
+	margin-top:40px;
+	margin-left: 55px;
+	margin-right: 55px;
+	font-size: 20px;
+}
+
+#popupContact .professor_answer {
+	color: #585858;
+}
+form button {
+	width:52px;
+	height:32px;
+}
+#pop_up_student_question{
+	font-size:40px;
+	font-weight: bold;
+}
