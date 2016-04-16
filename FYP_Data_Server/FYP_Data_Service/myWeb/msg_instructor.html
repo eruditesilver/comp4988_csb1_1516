@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<title>Messenger Instructor</title>
+<link href="css/msg_ins.css" rel="stylesheet" type="text/css">
+<link href="css/msg_reply.css" rel="stylesheet" type="text/css">
+<link href="css/Home.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/animate.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common_function.js"></script>
+<script type="text/javascript">
+//var userId = "2"; //get the id from session or cookie, 1001 example.
+var courseCode = "Comp";
+var courseNumber = "2611";
+
+
+
+
+//for instructor
+$(document).ready(function(){
+	refresh_message_box();
+
+	$(document).on("dblclick", ".msg-area .msg", function(){
+	   // var msg_line = $(this).attr("msg_line");
+	   var msg_line = $(this).html();
+	   var msg_split1 = $(this).html().split(" : ");
+	   if(msg_split1.length==3)
+	   {
+	   	var msg_q = msg_split1[1].split("Answer").join("");
+	   var msg_a = msg_split1[2].split("</span>").join("");
+	   var msg_id = $(this).attr('msg_id');
+	    $("#asked_question").append('<div id="pop_up_student_question" msg_id="'+msg_id+'">'+msg_q+'</div>');
+	    		document.getElementById("reply_msginput").value = msg_a;
+    	}
+    	else{
+    		var msg_q = msg_split1[1].split("Answer").join("");
+    		 var msg_id = $(this).attr('msg_id');
+	    $("#asked_question").append('<div id="pop_up_student_question" msg_id="'+msg_id+'">'+msg_q+'</div>');
+    	}
+	   
+	   div_show();
+	});
+
+	$(document).on("click", "#msg_reply", function(){
+		var reply_msg_id = $("#pop_up_student_question").attr('msg_id');
+		instrcutor_reply_message(reply_msg_id);
+	});
+
+
+
+})
+
+//
+
+function reply_start(){
+	console.log("Start replying");
+}
+
+function div_hide(){
+document.getElementById("reply_msginput").value = "";
+$("#asked_question").children().remove();
+document.getElementById('abc').style.display = "none";
+}
+
+function div_show() {
+document.getElementById('abc').style.display = "block";
+}
+</script>
+</head>
+
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+
+<header>
+<div id="brand" align="center">COMP4988 CSB1 QandA</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#pageone" >Home</a></li>
+        <li><a href="#pagethree" onClick="window.location='kp_main.html';">Knowledge Points Graph</a></li>
+        <li><a href="#pagetwo" onClick="window.location='msg_instructor.html';">Q&A </a></li>
+        <li><a href="#pagefour">Self Test</a></li>
+    </ul>
+</nav>
+
+<div class="msg-container">
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+  <div class="msg-area" id="msg-area"></div>
+	
+  	<body id="body" style="overflow:hidden;">
+		<div id="abc">
+		<!-- Popup Div Starts Here -->
+		<div id="popupContact">
+		<!-- Contact Us Form -->
+	 <form action="#" id="form" name="form" class="animated fadeIn">
+		<div id="close" style="color:#FFFFFF" onclick ="div_hide()">Close</div>
+		<h2>Answer form</h2>
+	<hr id="asked_question">
+		
+	<input id="reply_msginput" type="text" name="msginput" class="msginput" placeholder="Enter your reply here">
+
+	<button type="submit" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" id="msg_reply">Send</button>
+	
+	 <span class="floatRight">
+			
+			
+	</span>       
+	</form>
+	
+	</div> <!-- form end -->
+	<!-- Popup Div Ends Here -->
+	</div><!-- abc end-->	
+</div> <!-- msg container end -->
+<script type="text/javascript">
+
+var msginput = document.getElementById("msginput");
+var audioinput = document.getElementById("audio");
+var msgarea = document.getElementById("msg-area");
+
+
+</script>
+</body>
+</html>

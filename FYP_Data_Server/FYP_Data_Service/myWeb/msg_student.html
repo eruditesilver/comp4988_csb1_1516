@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<title>Messenger Student</title>
+<link href="css/msg.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/animate.css">
+<link href="css/Home.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common_function.js"></script>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+<script type="text/javascript">
+//var userId = "2"; //get the id from session or cookie, 1001 example.
+var courseCode = "Comp";
+var courseNumber = "2611";
+// var userId = Cookies.get('userId');
+// console.log(userId);
+var userId = 2;
+
+$(document).ready(function() {
+	refresh_message_box();
+	$("#msg_send").click(function(){
+		send_message();
+	})
+});
+// $(document).on("click", ".msg-area .msg", function(){
+//    var msg_id = $(this).attr("msg_id");
+//    alert(msg_id);
+// });
+
+</script>
+</head>
+<body>
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+
+<header>
+<div id="brand" align="center">COMP4988 CSB1 QandA</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#pageone" >Home</a></li>
+        <li><a href="#pagethree" onClick="window.location='kp_main.html';">Knowledge Points Graph</a></li>
+        <li><a href="#pagetwo" onClick="window.location='msg_instructor.html';">Q&A </a></li>
+        <li><a href="#pagefour">Self Test</a></li>
+    </ul>
+</nav>
+<div class="msg-container">
+	
+	<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+  <div class="msg-area" id="msg-area"></div>
+	<div class="bottom animated fadeInUp"><input  type="text" name="msginput" class="msginput" id="msginput" placeholder="Enter your question here ... ">
+	  <span class="floatRight">
+	<input type="submit" id="msg_send" value="Send">
+
+	</span>      
+	
+
+	</div>
+</div>
+<script type="text/javascript">
+
+/*function checkcookie() {
+	if (document.cookie.indexOf("messengerUname") == -1) {
+		showlogin();
+	} else {
+		hideLogin();
+	}
+}
+
+function getcookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1);
+		if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+*/
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

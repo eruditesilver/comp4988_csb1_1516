@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8"/>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.11.3.js"></script> 
+    <script src="js/fabricjs.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" >    
+    <!--script src="fabricjs-use.js"></script-->
+    <script src="js/graph-common.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/fabricjs-drag-drop.js"></script>
+    <!-- tag tool js -->
+
+
+    <script src="js/pdf.js"></script>
+
+    <link href="css/knowledgepoint-style.css" rel="stylesheet">
+
+</head>
+<haeder>
+</header>
+<body>
+    <div id="container" class="ui-grid-a">
+    <!--table id="container">
+        <tr>
+            <td-->
+            <div id="link-to-draw" class="ui-block-a">
+                <p class="ui-btn"> Click here to draw knowledge point graph </p>
+            </div>
+            <!--/td>
+            <td-->
+            <div id="workarea-container" class="ui-block-b">
+                <button id="edit-drag-drop">Edit Resources</button>
+                <div id="workarea-canvas-container" style="overflow: scroll;">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <div id="link-to-tag" class="ui-block-c">
+                <div id="material-content" data-role="collapsibleset">
+                    <div id="material-asset" data-role="collapsible">
+                        <h2> Assets </h2>
+                        <ul class="all-assetslist" data-role="listview">
+
+                        </ul>
+                    </div>
+                    <div id="material-message" data-role="collapsible">
+                        <h2> Q&A Messages </h2>
+                        <ul class="all-msglist" data-role="listview">
+
+                        </ul>
+                    </div>
+                    <!--div id="material-selftest" data-role="collapsible">
+                        <h2> Selftest </h2>
+                        <ul class="all-selftestlist" data-role="listview">
+
+                        </ul>
+                    </div-->
+                </div>
+            </div>
+        </div>
+            <!--/td>
+        </tr>
+    </table-->
+    </div>
+
+    <div id="individual-popup" data-role="popup" class="ui-content popupParent" data-dismissible="false" data-overlay-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <div id="popup-header" data-role="header">
+           
+        </div>
+        <div id="popup-content" data-role="collapsibleset">
+            <div id="popup-asset" data-role="collapsible">
+                <h2> Assets </h2>
+                <ul class="assetslist" data-role="listview">
+
+                </ul>
+            </div>
+            <div id="popup-message" data-role="collapsible">
+                <h2> Q&A Messages </h2>
+                <ul class="msglist" data-role="listview">
+
+                </ul>
+            </div>
+            <div id="popup-selftest" data-role="collapsible">
+                <h2> Selftest </h2>
+                <ul class="selftestlist" data-role="listview">
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="individual-2nd-popup" data-role="popup" class="ui-content popupChild" data-dismissible="false" data-overlay-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <div id="individual-2nd-popup-header" data-role="header">
+           
+        </div>
+        <div id="individual-2nd-popup-content" class="popup-content">
+
+        </div>
+    </div>
+
+    <div id="tag-tool-pdf-popup" data-role="popup" class="ui-content popupChild" data-dismissible="false" data-overlay-theme="a">
+        <script src="js/tag-tool-use.js"></script>
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+        <div id="tag-tool-pdf-header" class="tag-tool-popup-header" data-role="header">
+
+        </div>
+        <div id="tag-tool-pdf-content" class="popup-content">
+
+            <div class="container" width="100%">
+                <div id="viewer-container">
+                    <!--canvas id="canvas-viewer" style="border:1px solid black;"/-->
+                    <object id="pdf-viewer" width="100%" height="100%" data=""></object>
+                </div>
+                <div class="information-container" class="ui-grid-b">
+                    <p class="invalid-information" class="ui-block-a"> </p>
+                    <span class="ui-block-b"> </span>
+                    <span class="ui-block-c">
+                        <button data-icon="check" data-iconpos="left" data-inline="true" class="add-new-asset" id="add-new-ppt-asset" style="float: right;">Approve</button>
+                    </span>
+                    <!--span data-icon="check" class="ui-icon-check ui-btn-icon-left" id="add-new-ppt-asset" style="float:right;position:relative;">Approve</!--span-->
+                </div>
+
+                <div class="slider-container">
+                    <div id="slider" class="ui-grid-b">
+                        <div class="tag-start-container ui-block-a" style="width:10%;">
+                            <label for="tag-start">Start:</label>
+                            <input type="text" name="tag-start" class="tag-start" id="tag-start">
+                        </div>
+                        <div id="tag-slider" class="tag-range-container ui-block-b" style="width:60%;">
+
+                        </div>
+                        <div class="tag-end-container ui-block-c" style="width:10%;">
+                            <label for="tag-end">End:</label>
+                            <input type="text" name="tag-end" class="tag-end" id="tag-end">
+                        </div>
+                        <div class="tag-end-container ui-block-d" style="width:20%;">
+                            <label for="pdf-asset-name">Asset Name:</label>
+                            <input type="text" name="pdf-asset-name" class="asset-name" id="pdf-asset-name">
+                        </div>
+                    </div>
+                </div>
+                <!--button id="add-new-tag">Save</button-->
+            </div>
+
+        </div>
+    </div>
+
+    <div id="tag-tool-video-popup" data-role="popup" class="ui-content popupChild" data-dismissible="false" data-overlay-theme="a">
+        <script src="js/tag-tool-video-use.js"></script>
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <div id="tag-tool-video-popup-header" class="tag-tool-popup-header" data-role="header">
+
+        </div>
+        <div id="tag-tool-video-popup-content" class="popup-content">
+
+            <div class="container" width="100%">
+                <div id="viewer-container">
+                    <!--canvas id="canvas-viewer" style="border:1px solid black;"/-->
+                    <video id="video-player" controls>
+                        <!--<source src="COMP2611.mp4" type="video/mp4">-->
+                        <!--source src="movie.ogg" type="video/ogg"-->
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+                <div class="information-container" class="ui-grid-b">
+                    <p class="ui-block-a"> </p>
+                    <span class="ui-block-b"></span>
+                    <span class="ui-block-c"><button data-icon="check" data-iconpos="left" data-inline="true" class="add-new-asset" id="add-new-video-asset" style="float: right;">Approve</button></span>
+                    <!--span data-icon="check" class="ui-icon-check ui-btn-icon-left" id="add-new-ppt-asset" style="float:right;position:relative;">Approve</!--span-->
+                </div>
+                <div class="slider-container">
+                    <div id="slider" class="ui-grid-b">
+                        <div class="tag-start-container ui-block-a" style="width:10%;">
+                            <label for="tag-start">Start:</label>
+                            <input type="text" name="tag-start" class="tag-start" id="video-tag-start">
+                        </div>
+                        <div id="tag-video-slider" class="tag-range-container ui-block-b" style="width:60%;">
+
+                        </div>
+                        <div class="tag-end-container ui-block-c" style="width:10%;">
+                            <label for="tag-end">End:</label>
+                            <input type="text" name="tag-end" class="tag-end" id="video-tag-end">
+                        </div>
+                        <div class="tag-end-container ui-block-d" style="width:20%;">
+                            <label for="video-asset-name">Asset Name:</label>
+                            <input type="text" name="video-asset-name" class="asset-name" id="video-asset-name">
+                        </div>
+                    </div>
+                </div>
+                <!--button id="add-new-tag">Save</button-->
+            </div>
+
+        </div>
+    </div>
+
+    <div id="tag-tool-audio-popup" data-role="popup" class="ui-content popupChild" data-dismissible="false" data-overlay-theme="a">
+        <script src="js/tag-tool-audio-use.js"></script>
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+        <div id="tag-tool-audio-header" class="tag-tool-popup-header" data-role="header">
+
+        </div>
+        <div id="tag-tool-audio-content" class="popup-content">
+
+            <div class="container" width="100%">
+                <div id="viewer-container">
+                    <audio id="audio-player" controls>
+                        <!--source src="COMP2611.avi" type="audio/avi"-->
+                        <!--source src="http://www.w3schools.com/html/horse.mp3" type="audio/mp3"-->
+                        <!--source src="movie.ogg" type="audio/ogg"-->
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+                <div class="information-container" class="ui-grid-b">
+                    <p class="invalid-information" class="ui-block-a"> </p>
+                    <span class="ui-block-b"> </span>
+                    <span class="ui-block-c">
+                        <button data-icon="check" data-iconpos="left" data-inline="true" class="add-new-asset" id="add-new-ppt-asset" style="float: right;">Approve</button>
+                    </span>
+                    <!--span data-icon="check" class="ui-icon-check ui-btn-icon-left" id="add-new-ppt-asset" style="float:right;position:relative;">Approve</!--span-->
+                </div>
+
+                <div class="slider-container">
+                    <div id="slider" class="ui-grid-b">
+                        <div class="tag-start-container ui-block-a" style="width:10%;">
+                            <label for="tag-start">Start:</label>
+                            <input type="text" name="tag-start" class="tag-start" id="audio-tag-start">
+                        </div>
+                        <div id="tag-audio-slider" class="tag-range-container ui-block-b" style="width:60%;">
+
+                        </div>
+                        <div class="tag-end-container ui-block-c" style="width:10%;">
+                            <label for="tag-end">End:</label>
+                            <input type="text" name="tag-end" class="tag-end" id="audio-tag-end">
+                        </div>
+                        <div class="tag-end-container ui-block-d" style="width:20%;">
+                            <label for="audio-asset-name">Asset Name:</label>
+                            <input type="text" name="audio-asset-name" class="asset-name" id="audio-asset-name">
+                        </div>
+                    </div>
+                </div>
+                <!--button id="add-new-tag">Save</button-->
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

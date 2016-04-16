@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home_Stu</title>
+
+<link href="css/Home.css" rel="stylesheet" type="text/css">
+</head>
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+<script type="text/javascript" src="js/common_function.js"></script>
+<script type="text/javascript">
+		var userId = Cookies.get("userId");
+		console.log(userId);
+</script>
+<header>
+<div id="brand" align="center">COMP2611 Distributed Teaching Tool</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#pageone" >Home</a></li>
+        <li><a href="#pagetwo" onClick="window.location='msg_student.html';">Q&A </a></li>
+        <li><a href="#pagethree" onClick="window.location='kp_main.html';">Knowledge Points Graph</a></li>
+        <li><a href="#pagefour">Self Test</a></li>
+    </ul>
+</nav>
+
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home_Ins</title>
+
+
+<link href="css/Home.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+</head>
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+
+<header>
+<div id="brand" align="center">COMP4988 CSB1</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#pageone" >Home</a></li>
+        <li><a href="#pagethree" onClick="window.location='kp_main.html';">Knowledge Points Graph</a></li>
+        <li><a href="#pagetwo" onClick="window.location='msg_instructor.html';">Q&A </a></li>
+        <li><a href="#pagefour">Self Test</a></li>
+    </ul>
+</nav>
+<script type="text/javascript">
+	$(".menu-icon").click(function(){
+		$(".container").css("left","350");
+	})
+</script>
+
+<body>
+		<div class="container">
+        <div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="blog-post">
+		<h3>Knowledge Point Graph</h3>
+		<img class="thumbnail" src="http://placehold.it/850x350" style="width: 100%">
+		<p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+		</div>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="blog-post">
+		<h3>Q&A Messenger</h3>
+		<img class="thumbnail" src="http://placehold.it/850x350" style="width: 100%">
+		<p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+		</div>
+		</div>
+		</div>
+		</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>COMP4988 CSB1</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--script src="js/jquery-1.11.3.js"></script--> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/fabricjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" >    
+    <!--script src="fabricjs-use.js"></script-->
+    <script src="js/graph-common.js"></script>
+    <script src="js/student-graph.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <!--script src="js/fabricjs-drag-drop.js"></script-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="js/pdf.js"></script>
+
+    <link href="css/knowledgepoint-style.css" rel="stylesheet">
+	
+    <style>
+    .container {margin-top: 60px ;height:300px}
+    .navbar-inverse .navbar-brand { color: white }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <span class="navbar-brand">COMP4988 CSB1</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div id="workarea-container" class="ui-block-b">
+                
+                <div style="overflow: scroll;max-height: 800px;">
+                    <canvas id="canvas"></canvas>
+                </div>
+              </div>
+        </div>
+
+    <!-- individual Modal -->
+    <div id="individual-popup" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <span id="individual-popup-header" class="popup-header"> </span>
+          </div>
+
+          <div class="modal-body">
+            <div id="individual-content" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="individual-heading-1">
+                  <h4 class="panel-title" data-toggle="collapse" data-parent="#individual-content" href="#popup-asset" aria-expanded="true" aria-controls="popup-asset">
+                      Assets
+                  </h4>
+                </div>
+                <div id="popup-asset" class="assetslist panel-collapse collapse in" role="tabpanel" aria-labelledby="individual-heading-1">
+                    <ul class="list-group">
+                        <li class="list-group-item"> A </li>
+                        <li class="list-group-item"> B </li>
+                    </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="individual-heading-2">
+                  <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#individual-content" href="#popup-message" aria-expanded="false" aria-controls="popup-message">
+                      Q&A Messages
+                  </h4>
+                </div>
+                <div id="popup-message" class="msglist panel-collapse collapse" role="tabpanel" aria-labelledby="individual-heading-2">
+                        
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="individual-heading-3">
+                  <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#individual-content" href="#popup-selftest" aria-expanded="false" aria-controls="popup-selftest">
+                      Selftests
+                  </h4>
+                </div>
+                <div id="popup-selftest" class="selftestlist panel-collapse collapse" role="tabpanel" aria-labelledby="individual-heading-3">
+                    
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- individual 2nd Modal -->
+    <div id="individual-2nd-popup" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <span id="individual-2nd-popup-header" class="popup-header"> </span>
+          </div>
+
+          <div id="individual-2nd-popup-content" class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</body>
+</html>
