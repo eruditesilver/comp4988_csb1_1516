@@ -1,0 +1,6 @@
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\bin\FYP_Data_Service.dll.config
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\bin\FYP_Data_Service.dll
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\bin\FYP_Data_Service.pdb
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\obj\Release\FYPDataService.csprojResolveAssemblyReference.cache
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\obj\Release\FYP_Data_Service.dll
+C:\Users\Silver\documents\visual studio 2013\Projects\FYP_Data_Server\FYP_Data_Service\obj\Release\FYP_Data_Service.pdb

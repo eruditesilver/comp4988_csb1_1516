@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Silver\Desktop</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/FYPSystemDatabase.mdf">
+      <publishTime>01/25/2016 13:04:45</publishTime>
+    </File>
+    <File Include="App_Data/FYPSystemDatabase_log.ldf">
+      <publishTime>01/25/2016 13:04:45</publishTime>
+    </File>
+    <File Include="App_Data/UserInfo.mdf">
+      <publishTime>01/21/2016 13:16:41</publishTime>
+    </File>
+    <File Include="App_Data/UserInfo_log.ldf">
+      <publishTime>01/21/2016 13:16:41</publishTime>
+    </File>
+    <File Include="AuthenticationDataSet.xsc">
+      <publishTime>12/21/2015 19:00:06</publishTime>
+    </File>
+    <File Include="AuthenticationDataSet.xss">
+      <publishTime>12/21/2015 19:00:06</publishTime>
+    </File>
+    <File Include="bin/FYP_Data_Service.dll">
+      <publishTime>01/25/2016 13:17:16</publishTime>
+    </File>
+    <File Include="FYPSystemDataset.xsc">
+      <publishTime>01/25/2016 12:40:09</publishTime>
+    </File>
+    <File Include="FYPSystemDataset.xss">
+      <publishTime>01/25/2016 12:40:08</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/25/2016 13:17:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
