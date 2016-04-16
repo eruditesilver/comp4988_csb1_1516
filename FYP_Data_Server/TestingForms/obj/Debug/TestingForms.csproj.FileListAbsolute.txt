@@ -1,0 +1,11 @@
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\bin\Debug\TestingForms.exe.config
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\bin\Debug\TestingForms.exe
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\bin\Debug\TestingForms.pdb
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.csprojResolveAssemblyReference.cache
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.Form1.resources
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.Properties.Resources.resources
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.csproj.GenerateResource.Cache
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.exe
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\obj\Debug\TestingForms.pdb
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\bin\Debug\FYP_Data_Service.dll
+C:\Users\Silver\Documents\Visual Studio 2013\Projects\FYP_Data_Server\TestingForms\bin\Debug\FYP_Data_Service.pdb

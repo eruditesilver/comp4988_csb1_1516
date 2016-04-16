@@ -1,0 +1,4 @@
+﻿CREATE LOGIN [Client] 
+WITH PASSWORD ='';
+GO
+ALTER LOGIN [Client] DISABLE;
